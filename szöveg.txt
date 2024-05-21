@@ -1,0 +1,450 @@
+mit csinal ez a kod public class Lender {
+
+    private String name;
+    private String born;
+
+    public String getName() {
+        return name;
+    }
+    public String getBorn() {
+        return born;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setBorn(String born) {
+        this.born = born;
+    }
+
+    
+    
+
+}
+
+
+Ez a kód egy egyszerű Java osztályt definiál, amelynek neve Lender. Az osztály a következőket tartalmazza:
+	1.	Adattagok (mezők):
+	•	private String name; - Ez egy privát változó, amely a kölcsönadó nevét tárolja.
+	•	private String born; - Ez egy privát változó, amely a kölcsönadó születési dátumát tárolja.
+	2.	Getter metódusok:
+	•	public String getName() { return name; } - Ez a metódus visszaadja a name változó értékét.
+	•	public String getBorn() { return born; } - Ez a metódus visszaadja a born változó értékét.
+	3.	Setter metódusok:
+	•	public void setName(String name) { this.name = name; } - Ez a metódus beállítja a name változó értékét a megadott name paraméterrel.
+	•	public void setBorn(String born) { this.born = born; } - Ez a metódus beállítja a born változó értékét a megadott born paraméterrel.
+Összefoglalva, ez az osztály lehetővé teszi egy kölcsönadó nevének és születési dátumának tárolását és lekérdezését, valamint ezeknek az értékeknek a beállítását.
+
+
+
+
+
+
+
+Ez mit csinal public class Lending {
+
+    private String writer;
+    private String type;
+    private String title; 
+    private String lender_id;
+
+    
+    public String getWriter() {
+        return writer;
+    }
+    public void setWriter(String writer) {
+        this.writer = writer;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getLender_id() {
+        return lender_id;
+    }
+    public void setLender_id(String lender_id) {
+        this.lender_id = lender_id;
+    }
+
+    
+}
+
+
+Ez a kód egy Java osztályt definiál, amelynek neve Lending. Az osztály a következőket tartalmazza:
+	1.	Adattagok (mezők):
+	•	private String writer; - Ez a privát változó a kölcsönzött tárgy íróját tárolja.
+	•	private String type; - Ez a privát változó a kölcsönzött tárgy típusát tárolja.
+	•	private String title; - Ez a privát változó a kölcsönzött tárgy címét tárolja.
+	•	private String lender_id; - Ez a privát változó a kölcsönadó azonosítóját tárolja.
+	2.	Getter metódusok:
+	•	public String getWriter() { return writer; } - Ez a metódus visszaadja a writer változó értékét.
+	•	public String getType() { return type; } - Ez a metódus visszaadja a type változó értékét.
+	•	public String getTitle() { return title; } - Ez a metódus visszaadja a title változó értékét.
+	•	public String getLender_id() { return lender_id; } - Ez a metódus visszaadja a lender_id változó értékét.
+	3.	Setter metódusok:
+	•	public void setWriter(String writer) { this.writer = writer; } - Ez a metódus beállítja a writer változó értékét a megadott writer paraméterrel.
+	•	public void setType(String type) { this.type = type; } - Ez a metódus beállítja a type változó értékét a megadott type paraméterrel.
+	•	public void setTitle(String title) { this.title = title; } - Ez a metódus beállítja a title változó értékét a megadott title paraméterrel.
+	•	public void setLender_id(String lender_id) { this.lender_id = lender_id; } - Ez a metódus beállítja a lender_id változó értékét a megadott lender_id paraméterrel.
+Összefoglalva, ez az osztály lehetővé teszi egy kölcsönzött tárgy írójának, típusának, címének és a kölcsönadó azonosítójának tárolását és lekérdezését, valamint ezeknek az értékeknek a beállítását.
+
+
+
+
+
+
+
+Ez mit csinal 
+
+public class Konyvtar {
+    public static void main(String[] args) {
+        System.out.println(args.length);
+        DatabaseController dbCtr = new DatabaseController(args[0], args[1]);
+        int recordslender = dbCtr.setLendersTable();
+        if(recordslender != 0){
+            System.out.println("Sikeres írás, kiírt rekordok: " + recordslender);
+        }
+        else{
+           System.out.println("Hiba az írás során");
+        }
+        int recordslending = dbCtr.setLendersTable();
+        if(recordslending != 0){
+            System.out.println("Sikeres írás, kiírt rekordok: " + recordslending);
+        }
+        else{
+           System.out.println("Hiba az írás során");
+        }
+    }
+    
+}
+
+
+Ez a kód egy Java osztályt definiál, amelynek neve Konyvtar. Az osztály tartalmaz egy main metódust, ami a program belépési pontja. Nézzük meg részletesen, mit csinál a kód:
+	1.	Argumentumok hossza: java  Kód másolása System.out.println(args.length);    Ez a sor kiírja a parancssori argumentumok számát, amit a program futtatásakor adtak meg.
+	2.	DatabaseController példányosítása: java  Kód másolása DatabaseController dbCtr = new DatabaseController(args[0], args[1]);    Ez a sor létrehoz egy DatabaseController objektumot, amelyet az args tömb első és második elemével inicializál. Ezek az argumentumok valószínűleg adatbázis kapcsolódási adatok, mint például a felhasználónév és a jelszó vagy az adatbázis URL és a felhasználónév.
+	3.	Lenders tábla írása: java  Kód másolása int recordslender = dbCtr.setLendersTable();    Ez a sor meghívja a setLendersTable metódust a DatabaseController objektumon, és elmenti az eredményt a recordslender változóba. Ez a metódus valószínűleg adatokat ír az adatbázisban egy Lenders nevű táblába, és visszaadja a sikeresen írt rekordok számát.
+	4.	Lenders tábla írás eredményének ellenőrzése: java  Kód másolása if(recordslender != 0){ System.out.println("Sikeres írás, kiírt rekordok: " + recordslender); } else{ System.out.println("Hiba az írás során"); }    Ez a kódrészlet ellenőrzi, hogy a setLendersTable metódus hányszor írt rekordot. Ha a visszatérési érték nem nulla, akkor kiírja a sikeres írás üzenetet és a kiírt rekordok számát. Ha nulla, akkor egy hibaüzenetet ír ki.
+	5.	Lenders tábla írás másodszor (valószínűleg hibás): java  Kód másolása int recordslending = dbCtr.setLendersTable();    Újra meghívja a setLendersTable metódust, de ez valószínűleg egy másik tábla (például Lending) írását kellett volna hívnia, például egy setLendingTable nevű metódust.
+	6.	Második írás eredményének ellenőrzése: java  Kód másolása if(recordslending != 0){ System.out.println("Sikeres írás, kiírt rekordok: " + recordslending); } else{ System.out.println("Hiba az írás során"); }    Ugyanaz az ellenőrzési folyamat, mint korábban, de a második hívás eredményét ellenőrzi.
+Összefoglalva, ez a kód létrehoz egy adatbázis-kezelő objektumot, majd megpróbál adatokat írni a Lenders táblába kétszer, bár valószínűleg a második írás helytelen metódushívás, és inkább egy másik tábla (például Lending) írására lett volna szükség. A kód mindkét írás eredményét kiírja a konzolra.
+
+
+
+
+
+
+
+Ez mit csinal import java.io.FileReader;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+public class FileController {
+
+    public FileController(){
+
+    }
+    public ArrayList<Lending>ReadKolcsonzesek(String fileName){
+
+        FileReader fr = null;
+
+        try {
+            
+            fr = new FileReader("../" + fileName);
+
+        } catch (FileNotFoundException ex) {
+          System.out.println("Nincs meg a fájl");
+        }
+
+        Scanner scanner = new Scanner(fr);
+        ArrayList<Lending> lendings = new ArrayList<>();
+        scanner.nextLine();
+
+        while(scanner.hasNext()){
+            String row = scanner.nextLine();
+            String[] rowSp = row.split(";");
+            Lending lending = new Lending();
+            lending.setLender_id(rowSp[0]);
+            lending.setWriter(rowSp[1]);
+            lending.setType(rowSp[2]);
+            lending.setTitle(rowSp[3]);
+
+            lendings.add(lending);
+
+        }
+       return lendings;
+    }
+    public ArrayList<Lender>ReadKolcsonzok(String fileName){
+
+        FileReader fr = null;
+
+        try {
+            
+            //fr = new FileReader("../" + fileName);
+            fr = new FileReader(fileName);
+
+
+        } catch (FileNotFoundException ex) {
+          System.out.println("Nincs meg a fájl");
+        }
+
+        Scanner scanner = new Scanner(fr);
+        ArrayList<Lender> lenders = new ArrayList<>();
+        scanner.nextLine();
+
+        while(scanner.hasNext()){
+            String row = scanner.nextLine();
+            String[] rowSp = row.split(";");
+            Lender lender = new Lender();
+            lender.setName (rowSp[0]);
+            lender.setBorn(rowSp[1]);
+            
+
+            lenders.add(lender);
+
+        }
+        
+       return lenders;
+    }
+}
+
+
+Ez a kód egy Java osztályt definiál, amelynek neve FileController. Az osztály két metódust tartalmaz, amelyek fájlokból olvasnak adatokat és azokat Java objektumokba töltik. Nézzük meg részletesen, mit csinál a kód:
+Osztály és Konstruktor
+	•	FileController osztály: Az osztály tartalmazza az adatbázis-kezeléssel kapcsolatos fájlműveleteket.
+	•	Konstruktor: Az alapértelmezett konstruktor nem csinál semmit.
+ReadKolcsonzesek metódus
+Ez a metódus egy fájlból olvas be kölcsönzési adatokat és azokat Lending objektumok listájába (ArrayList) tölti.
+java
+
+Kód másolása
+public ArrayList<Lending> ReadKolcsonzesek(String fileName) { FileReader fr = null; try { fr = new FileReader("../" + fileName); } catch (FileNotFoundException ex) { System.out.println("Nincs meg a fájl"); return new ArrayList<>(); // Adjunk vissza üres listát hiba esetén } Scanner scanner = new Scanner(fr); ArrayList<Lending> lendings = new ArrayList<>(); scanner.nextLine(); // Az első sor átugrása (fejléc) while (scanner.hasNext()) { String row = scanner.nextLine(); String[] rowSp = row.split(";"); Lending lending = new Lending(); lending.setLender_id(rowSp[0]); lending.setWriter(rowSp[1]); lending.setType(rowSp[2]); lending.setTitle(rowSp[3]); lendings.add(lending); } scanner.close(); // Scanner bezárása return lendings; }
+ReadKolcsonzok metódus
+Ez a metódus egy fájlból olvas be kölcsönzői adatokat és azokat Lender objektumok listájába (ArrayList) tölti.
+java
+
+Kód másolása
+public ArrayList<Lender> ReadKolcsonzok(String fileName) { FileReader fr = null; try { fr = new FileReader(fileName); } catch (FileNotFoundException ex) { System.out.println("Nincs meg a fájl"); return new ArrayList<>(); // Adjunk vissza üres listát hiba esetén } Scanner scanner = new Scanner(fr); ArrayList<Lender> lenders = new ArrayList<>(); scanner.nextLine(); // Az első sor átugrása (fejléc) while (scanner.hasNext()) { String row = scanner.nextLine(); String[] rowSp = row.split(";"); Lender lender = new Lender(); lender.setName(rowSp[0]); lender.setBorn(rowSp[1]); lenders.add(lender); } scanner.close(); // Scanner bezárása return lenders; }
+Összefoglalás
+	•	A FileController osztály két metódust tartalmaz, amelyek fájlokból olvasnak adatokat.
+	•	A ReadKolcsonzesek metódus Lending objektumokat olvas be egy fájlból és tölt egy listába.
+	•	A ReadKolcsonzok metódus Lender objektumokat olvas be egy fájlból és tölt egy listába.
+	•	Mindkét metódus fejlécet feltételez az első sorban, amelyet átugranak.
+	•	Hiba esetén (pl. ha a fájl nem található) a metódusok üres listát adnak vissza és hibaüzenetet írnak a konzolra.
+
+
+
+
+
+
+
+Ez mit csinal import java.sql.Connection;
+import java.sql.Date;
+import java. util.ArrayList;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+
+
+public class DatabaseController {
+
+        private Connection conn;
+        private String lenderFile;
+        private String lendingFile;
+        int counter = 0;
+
+    public DatabaseController(String lenderFile, String lendingFile){
+        
+        this.lenderFile = lenderFile;
+        this.lendingFile = lendingFile;
+
+
+      buildConnection();
+    }
+
+    private void buildConnection(){
+        Connect connect =new Connect();
+        connect.connecting();
+        conn = connect.getConnection();
+        if (conn == null) {
+            System.out.println("buildConnection conn == null");
+        }
+    }
+
+    public int setLendersTable(){
+        ArrayList<Lender> lenders = new ArrayList<>();
+        FileController fileCtr = new FileController();
+        lenders = fileCtr.ReadKolcsonzok(lenderFile);
+
+        String sql = "INSERT INTO lenders(name,born) VALUES" +
+                 "(?,?)";
+        PreparedStatement pstmt = null;
+
+        try {
+            pstmt = conn.prepareStatement(sql);
+
+            for(Lender len : lenders){
+
+                pstmt .setString(1, len.getName());
+                System.out.println(len.getBorn());
+                pstmt.setDate(2, Date.valueOf(len.getBorn()));
+
+                pstmt.executeQuery();
+
+                counter++;
+
+            }
+        } catch (SQLException e) {
+            System.out.println("Hiba az írás során");
+        }
+
+        return counter;
+    }
+
+    public int setLendingsTable(){
+        ArrayList<Lending> lendings = new ArrayList<>();
+        FileController fileCtr = new FileController();
+        lendings = fileCtr.ReadKolcsonzesek(lendingFile);
+        String sql = "INSERT INTO lendings(writer,type,title,lender_id) VALUES" +  
+        "( ?,?,?,?)";
+        PreparedStatement pstmt = null;
+
+        try {
+            
+
+            for(Lending len : lendings){
+                pstmt = conn.prepareStatement(sql);
+                pstmt .setString(1, len.getWriter());
+                pstmt .setString(2, len.getType());
+                pstmt .setString(3, len.getTitle());
+                pstmt .setInt(4, Integer.parseInt(len.getLender_id()));;
+             
+
+                pstmt.executeQuery();
+
+                counter++;
+
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+        return counter;
+    }
+    
+
+
+}
+
+
+Ez a kód egy Java osztályt definiál, amelynek neve DatabaseController. Az osztály célja, hogy fájlokból adatokat olvasson be és ezeket adatbázis táblákba mentse. Az osztály főbb részei és funkciói a következők:
+Osztály és Konstruktor
+	•	Adattagok:
+	•	private Connection conn;: Az adatbázis kapcsolatot tárolja.
+	•	private String lenderFile;: A kölcsönzőket tartalmazó fájl neve.
+	•	private String lendingFile;: A kölcsönzéseket tartalmazó fájl neve.
+	•	int counter = 0;: Egy számláló, amely a beszúrt rekordok számát tartja nyilván.
+	•	Konstruktor:
+	•	A konstruktor beállítja a lenderFile és lendingFile változókat, majd meghívja a buildConnection metódust az adatbázis kapcsolat létrehozásához.
+buildConnection metódus
+Ez a privát metódus létrehozza az adatbázis kapcsolatot a Connect osztály segítségével.
+java
+
+Kód másolása
+private void buildConnection() { Connect connect = new Connect(); connect.connecting(); conn = connect.getConnection(); if (conn == null) { System.out.println("buildConnection conn == null"); } }
+setLendersTable metódus
+Ez a metódus beolvassa a kölcsönzők adatait egy fájlból és beszúrja azokat az adatbázis lenders táblájába.
+java
+
+Kód másolása
+public int setLendersTable() { ArrayList<Lender> lenders = new ArrayList<>(); FileController fileCtr = new FileController(); lenders = fileCtr.ReadKolcsonzok(lenderFile); String sql = "INSERT INTO lenders(name, born) VALUES (?, ?)"; PreparedStatement pstmt = null; try { pstmt = conn.prepareStatement(sql); for (Lender len : lenders) { pstmt.setString(1, len.getName()); pstmt.setDate(2, Date.valueOf(len.getBorn())); pstmt.executeQuery(); counter++; } } catch (SQLException e) { System.out.println("Hiba az írás során"); System.out.println(e.getMessage()); } return counter; }
+setLendingsTable metódus
+Ez a metódus beolvassa a kölcsönzések adatait egy fájlból és beszúrja azokat az adatbázis lendings táblájába.
+java
+
+Kód másolása
+public int setLendingsTable() { ArrayList<Lending> lendings = new ArrayList<>(); FileController fileCtr = new FileController(); lendings = fileCtr.ReadKolcsonzesek(lendingFile); String sql = "INSERT INTO lendings(writer, type, title, lender_id) VALUES (?, ?, ?, ?)"; PreparedStatement pstmt = null; try { for (Lending len : lendings) { pstmt = conn.prepareStatement(sql); pstmt.setString(1, len.getWriter()); pstmt.setString(2, len.getType()); pstmt.setString(3, len.getTitle()); pstmt.setInt(4, Integer.parseInt(len.getLender_id())); pstmt.executeQuery(); counter++; } } catch (SQLException ex) { System.out.println("Hiba az írás során"); System.out.println(ex.getMessage()); } return counter; }
+Összefoglalás
+	•	Adatok beolvasása és adatbázisba mentése: A DatabaseController osztály fájlokból (lenderFile és lendingFile) beolvassa az adatokat és azokat adatbázis táblákba (lenders és lendings) beszúrja.
+	•	Adatbázis kapcsolat kezelése: A buildConnection metódus létrehozza az adatbázis kapcsolatot.
+	•	Adatok beszúrása: A setLendersTable és setLendingsTable metódusok a beolvasott adatokat beszúrják az adatbázisba és visszatérnek a beszúrt rekordok számával.
+	•	Hibakezelés: A metódusok hiba esetén hibaüzenetet írnak a konzolra és folytatják a futást.
+
+
+
+
+
+
+
+Ez mit csinal import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Connect {
+    
+    private Connection conn;
+
+    public Connect(){
+
+        conn = null;
+
+    }
+    public void connecting(){
+        String connectStr = "jdbc:mariadb://localhost:3306/diakdu_konyvtardu?user=diakdu&password=123";
+
+
+        try {
+
+            conn = DriverManager.getConnection( connectStr );
+
+        } catch (SQLException e) {
+         System.out.println("Hiba a kapcsolódás során");
+        }
+        /*if (conn != null) {
+            System.out.println("Ok");
+        }else{
+            System.out.println("Nincs kapcsolat");
+        }*/
+    }
+    public Connection getConnection(){return conn;}
+}
+
+
+Ez a kód egy Java osztályt definiál, amelynek neve Connect. Az osztály célja, hogy kapcsolatot hozzon létre egy adatbázissal. Nézzük meg részletesen, mit csinál a kód:
+Osztály és Konstruktor
+	•	Adattag:
+	•	private Connection conn;: Ez a változó tárolja az adatbázis kapcsolatot.
+	•	Konstruktor: java  Kód másolása public Connect() { conn = null; }    A konstruktor inicializálja a conn változót null értékkel.
+connecting metódus
+Ez a metódus létrehozza az adatbázis kapcsolatot a megadott kapcsolati string segítségével.
+java
+
+Kód másolása
+public void connecting() { String connectStr = "jdbc:mariadb://localhost:3306/diakdu_konyvtardu?user=diakdu&password=123"; try { conn = DriverManager.getConnection(connectStr); } catch (SQLException e) { System.out.println("Hiba a kapcsolódás során"); } /* if (conn != null) { System.out.println("Ok"); } else { System.out.println("Nincs kapcsolat"); } */ }
+	•	Kapcsolati string: A connectStr változó tartalmazza a kapcsolati stringet, amely a MariaDB adatbázis eléréséhez szükséges. Ez magában foglalja az adatbázis hosztját, portját, adatbázis nevét, valamint a felhasználónevet és jelszót.
+	•	Kapcsolat létrehozása: A DriverManager.getConnection(connectStr) metódus megpróbál kapcsolatot létesíteni az adatbázissal a megadott kapcsolati string alapján.
+	•	Hibakezelés: Ha a kapcsolat létrehozása során SQLException keletkezik, akkor egy hibaüzenetet ír ki a konzolra.
+getConnection metódus
+Ez a metódus visszaadja a conn változót, amely az adatbázis kapcsolatot tartalmazza.
+java
+
+Kód másolása
+public Connection getConnection() { return conn; }
+Összefoglalás
+	•	Kapcsolat inicializálása: A Connect osztály létrehoz egy kapcsolatot a megadott MariaDB adatbázissal a connecting metódus segítségével.
+	•	Hibakezelés: A connecting metódus kezeli a kapcsolat létrehozása során fellépő hibákat és hibaüzenetet ír ki a konzolra.
+	•	Kapcsolat visszaadása: A getConnection metódus visszaadja a létrehozott kapcsolatot, amelyet más osztályok használhatnak az adatbázis műveletekhez.
+Ez az osztály hasznos lehet egy adatbázis-kezelő alkalmazásban, ahol szükség van egy egyszerű és egységes módszerre az adatbázis kapcsolat létrehozásához és eléréséhez.
+
+
+
+
+
